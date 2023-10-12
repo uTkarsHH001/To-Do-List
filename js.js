@@ -53,7 +53,7 @@ let sun = select('.head button img#sun');
 let moon = select('.head button img#moon');
 let body = select('body');
 let r = select(':root');
-let x = window.matchMedia("(min-width: 800px)");
+let x = window.matchMedia("(min-width: 700px)");
 
 function eanbleLighMode() {
 
