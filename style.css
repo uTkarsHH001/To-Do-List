@@ -1,0 +1,87 @@
+:root {
+    --checkboxColor: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --lightM: hsl(0, 0%, 98%);
+    --lightB: hsl(236, 33%, 92%);
+    --darkM: hsl(235, 24%, 19%);
+    --darkB: hsl(235, 21%, 11%);
+    --main: var(--darkM);
+    --bg: var(--darkB);
+    --txtClr: var(--lightM);
+    --fontSize: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Josefin Sans;
+}
+
+body {
+    height: 100vh;
+    background-image: url(images/bg-mobile-dark.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: top;
+    background-color: var(--bg);
+}
+
+.container {
+    margin: 50px 40px;
+}
+
+.head {
+    margin: 30px 0;
+}
+
+.head h2 {
+    letter-spacing: 4px;
+    color: white;
+    display: inline-block;
+}
+
+.head button {
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+button:hover,
+ul li img:hover {
+    transform: scale(1.2);
+}
+
+.tasks {
+    margin: 35px 0;
+}
+
+.tasks input#taskhead,
+ul li {
+    width: 100%;
+    padding: 13px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--main);
+    color: var(--txtClr);
+}
+
+.tasklist {
+    margin-top: 15px;
+}
+
+ul li {
+    list-style-type: none;
+    border-bottom: 1px grey solid;
+}
+
+ul li input {
+    margin-right: 10px;
+}
+
+ul li img {
+    float: right;
+}
+
+.dnone {
+    display: none;
+}
