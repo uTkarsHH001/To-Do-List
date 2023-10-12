@@ -53,12 +53,21 @@ let sun = select('.head button img#sun');
 let moon = select('.head button img#moon');
 let body = select('body');
 let r = select(':root');
+let x = window.matchMedia("(min-width: 800px)");
 
 function eanbleLighMode() {
 
     sun.classList.add('dnone');
     moon.classList.remove('dnone');
-    body.style.backgroundImage = 'url(images/bg-mobile-light.jpg)';
+
+    if (x.matches) {
+        body.style.backgroundImage = 'url(images/bg-desktop-light.jpg)';
+
+    } else {
+        body.style.backgroundImage = 'url(images/bg-mobile-light.jpg)';
+    }
+
+
     r.style.setProperty('--main', 'var(--lightM)');
     r.style.setProperty('--bg', 'var(--lightB)');
     r.style.setProperty('--txtClr', 'var(--darkM)');
@@ -70,7 +79,14 @@ function disableLightMode() {
 
     moon.classList.add('dnone');
     sun.classList.remove('dnone');
-    body.style.backgroundImage = 'url(images/bg-mobile-dark.jpg)';
+
+    if (x.matches) {
+        body.style.backgroundImage = 'url(images/bg-desktop-dark.jpg)';
+
+    } else {
+        body.style.backgroundImage = 'url(images/bg-mobile-dark.jpg)';
+    }
+
     r.style.setProperty('--main', 'var(--darkM)');
     r.style.setProperty('--bg', 'var(--darkB)');
     r.style.setProperty('--txtClr', 'var(--lightM)');
